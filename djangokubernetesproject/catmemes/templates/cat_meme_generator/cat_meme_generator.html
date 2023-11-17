@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cat_meme_generator.css">
+    <title>Cat Meme Generator</title>
+</head>
+<body>
+    <h1>Cat Meme Generator</h1>
+
+    {% if cat_meme_url %}
+        <img src="{{ cat_meme_url }}" alt="Cat Meme">
+    {% else %}
+        <p>Unable to fetch cat meme. Please try again later.</p>
+    {% endif %}
+
+    <div class="flex-parent jc-center">
+        <button class="block grey margin-auto" onclick="location.reload()">Click Here to Generate Another Cat Meme</button>
+    </div>
+</body>
+</html>
